@@ -6,7 +6,7 @@ Update-ExecutionPolicy Unrestricted
 Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
 Set-TaskbarSmall
 Enable-RemoteDesktop
-cinstm pswindowsupdate # My version of windows updater
+cinstm pswindowsupdate # Alternative version of windows updater PS interface
 Import-Module PsWindowsUpdate
 if(Get-WURebootStatus -Silent){Invoke-Reboot}
 cinstm VisualStudio2012Ultimate
@@ -14,6 +14,9 @@ if((Get-Item "$($Boxstarter.programFiles86)\Microsoft Visual Studio 11.0\Common7
     if(Get-WURebootStatus -Silent){Invoke-Reboot}
     Install-ChocolateyPackage 'vs update 2 ctp2' 'exe' '/passive /norestart' 'http://download.microsoft.com/download/8/9/3/89372D24-6707-4587-A7F0-10A29EECA317/vsupdate_KB2707250.exe'
 }
+Import-Module PsWindowsUpdate
+Get-WUInstall -AcceptAll -IgnoreRebootRequired
+if(Get-WURebootStatus -Silent){Invoke-Reboot}
 cinstm fiddler
 cinstm mssqlserver2012express
 cinstm git-credential-winstore # For storing credentials GIT repositories
@@ -34,7 +37,38 @@ cinstm ghostdoc # Needs update?
 cinst tfs2012powertools
 # Need Specflow
 cinstm webpicommandline
-cinstm -source webpi 
+# Various tools from webpi
+cinstm -source webpi IIS7                 		#IIS Recommended Configuration
+cinstm -source webpi IISExpress_ByPlatform 		#IIS 8.0 Express (Windows Vista and up) Or IIS 7.5 Express (Windows XP)- August 2012
+cinstm -source webpi SQLLocalDB           		#Microsoft SQL Express LocalDB Edition 11.0
+cinstm -source webpi WIFSDK               		#Windows Identity Foundation SDK
+cinstm -source webpi WindowsInstaller45   		#Windows Installer 4.5
+cinstm -source webpi ASPDOTNETandWebTools2012_2 	#ASP.NET and Web Tools 2012.2
+cinstm -source webpi DACFX                		#Microsoft SQL Server 2012 Data-Tier Application Framework (DACFx) (March 2013)
+cinstm -source webpi OfficeToolsForVS2012RTW		#Microsoft Office Developer Tools for Visual Studio 2012
+cinstm -source webpi ServiceBusCU1        		#Service Bus 1.0 Cumulative Update 1
+cinstm -source webpi SSDTVS2010           		#Microsoft SQL Server Data Tools for Visual Studio 2010
+cinstm -source webpi SSDTVS2012           		#Microsoft SQL Server Data Tools for Visual Studio 2012
+cinstm -source webpi VS2012LS2NOSQL       		#LightSwitch in Visual Studio 2012 - Server Configuration without local SQL Express
+cinstm -source webpi WorkflowClient       		#Workflow Client 1.0
+# cinstm -source webpi AppFabric            		#Windows Server AppFabric
+# cinstm -source webpi SQLManagementStudio  		#SQL Server 2008 R2 Management Studio Express with SP1
+# cinstm -source webpi WDeployPS            		#Web Deploy 3.0 for Hosting Servers
+# cinstm -source webpi Silverlight5Tools    		#Silverlight 5 Tools for Visual Studio 2010
+# cinstm -source webpi MVC2                 		#ASP.NET MVC 2
+# cinstm -source webpi MVC3                 		#ASP.NET MVC 3 (Visual Studio 2010)
+# cinstm -source webpi netframework2        		#.NET Framework 2.0 SP 2
+# cinstm -source webpi NETFramework35       		#.NET Framework 3.5 SP 1
+# cinstm -source webpi NETFramework45       		#Microsoft .NET Framework 4.5
+# cinstm -source webpi NETFramework4PU3     		#Microsoft .NET Framework 4 - Runtime Update 3
+# cinstm -source webpi Silverlight4Toolkit  		#Silverlight 4 Toolkit April 2010 Release
+# cinstm -source webpi SMO_11_0             		#SQL Server 2012 Shared Management Objects (April 2012)
+# cinstm -source webpi SQLCE                		#Microsoftr SQL Serverr Compact Latest
+# cinstm -source webpi SQLCE_4_0            		#Microsoftr SQL Serverr Compact 4.0 SP1
+# cinstm -source webpi SQLCEforWM           		#Microsoftr SQL Serverr Compact 4.0 SP1 CTP1
+# cinstm -source webpi SQLCEVSTools_4_0     		#Microsoft Visual Studio 2010 SP1 Tools for SQL Server Compact 4.0
+# cinstm -source webpi ExpressionEncoder4   		#Expression Encoder 4 with Service Pack 2
+# cinstm -source webpi ExpressionWeb        		#Expression Web 4 Trial
 
 # cinst Microsoft-Hyper-V-All -source windowsFeatures
 # cinst IIS-WebServerRole -source windowsfeatures
@@ -67,7 +101,10 @@ Install-ChocolateyVsixPackage xunit http://visualstudiogallery.msdn.microsoft.co
 Install-ChocolateyVsixPackage autowrocktestable http://visualstudiogallery.msdn.microsoft.com/ea3a37c9-1c76-4628-803e-b10a109e7943/file/73131/1/AutoWrockTestable.vsix
 # Install-ChocolateyVsixPackage vscommands http://visualstudiogallery.msdn.microsoft.com/a83505c6-77b3-44a6-b53b-73d77cba84c8/file/74740/18/SquaredInfinity.VSCommands.VS11.vsix
 
-cinstm powershell # WMF 3.0
+cinstm powershell # Ensure WMF 3.0
+Import-Module PsWindowsUpdate
+Get-WUInstall -AcceptAll -IgnoreRebootRequired
+if(Get-WURebootStatus -Silent){Invoke-Reboot}
     Write-ChocolateySuccess 'DevSetup2013'
 } catch {
   Write-ChocolateyFailure 'DevSetup2013' $($_.Exception.Message)
