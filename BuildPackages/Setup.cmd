@@ -15,3 +15,6 @@ Invoke-BoxstarterBuild DevSetup2013
 # \\MYCOMPUTER\Boxstarter\Boxstarter DevSetup2013
  
 #Enter password when prompted and come back later to new box
+#   Import-Module $env:appdata\boxstarter\Boxstarter.Chocolatey\Boxstarter.Chocolatey.psd1
+#   Invoke-BoxstarterBuild DevSetup2013
+#   Boxstarter DevSetup2013

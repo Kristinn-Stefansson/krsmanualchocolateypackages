@@ -1,6 +1,7 @@
 try {
 
-Install-WindowsUpdate -AcceptEula
+Get-WUInstall -AcceptAll -IgnoreRebootRequired
+# Install-WindowsUpdate -AcceptEula
 Update-ExecutionPolicy Unrestricted
 # Move-LibraryDirectory "Personal" "$env:UserProfile\skydrive\documents"
 Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
@@ -32,43 +33,43 @@ cinstm notepadplusplus
 cinstm sysinternals # Install common systernal troubleshooting tools
 cinstm NugetPackageExplorer
 cinstm resharper
-cinstm ghostdoc # Needs update?
+# cinstm ghostdoc # Needs update? At least not working.
 # cinstm windbg # Microsoft Windows Debugger, seemed not to work (1.4.2012)
-cinst tfs2012powertools
+cinstm tfs2012powertools
 # Need Specflow
 cinstm webpicommandline
 # Various tools from webpi
-cinstm -source webpi IIS7                 		#IIS Recommended Configuration
-cinstm -source webpi IISExpress_ByPlatform 		#IIS 8.0 Express (Windows Vista and up) Or IIS 7.5 Express (Windows XP)- August 2012
-cinstm -source webpi SQLLocalDB           		#Microsoft SQL Express LocalDB Edition 11.0
-cinstm -source webpi WIFSDK               		#Windows Identity Foundation SDK
-cinstm -source webpi WindowsInstaller45   		#Windows Installer 4.5
-cinstm -source webpi ASPDOTNETandWebTools2012_2 	#ASP.NET and Web Tools 2012.2
-cinstm -source webpi DACFX                		#Microsoft SQL Server 2012 Data-Tier Application Framework (DACFx) (March 2013)
-cinstm -source webpi OfficeToolsForVS2012RTW		#Microsoft Office Developer Tools for Visual Studio 2012
-cinstm -source webpi ServiceBusCU1        		#Service Bus 1.0 Cumulative Update 1
-cinstm -source webpi SSDTVS2010           		#Microsoft SQL Server Data Tools for Visual Studio 2010
-cinstm -source webpi SSDTVS2012           		#Microsoft SQL Server Data Tools for Visual Studio 2012
-cinstm -source webpi VS2012LS2NOSQL       		#LightSwitch in Visual Studio 2012 - Server Configuration without local SQL Express
-cinstm -source webpi WorkflowClient       		#Workflow Client 1.0
-# cinstm -source webpi AppFabric            		#Windows Server AppFabric
-# cinstm -source webpi SQLManagementStudio  		#SQL Server 2008 R2 Management Studio Express with SP1
-# cinstm -source webpi WDeployPS            		#Web Deploy 3.0 for Hosting Servers
-# cinstm -source webpi Silverlight5Tools    		#Silverlight 5 Tools for Visual Studio 2010
-# cinstm -source webpi MVC2                 		#ASP.NET MVC 2
-# cinstm -source webpi MVC3                 		#ASP.NET MVC 3 (Visual Studio 2010)
-# cinstm -source webpi netframework2        		#.NET Framework 2.0 SP 2
-# cinstm -source webpi NETFramework35       		#.NET Framework 3.5 SP 1
-# cinstm -source webpi NETFramework45       		#Microsoft .NET Framework 4.5
-# cinstm -source webpi NETFramework4PU3     		#Microsoft .NET Framework 4 - Runtime Update 3
-# cinstm -source webpi Silverlight4Toolkit  		#Silverlight 4 Toolkit April 2010 Release
-# cinstm -source webpi SMO_11_0             		#SQL Server 2012 Shared Management Objects (April 2012)
-# cinstm -source webpi SQLCE                		#Microsoftr SQL Serverr Compact Latest
-# cinstm -source webpi SQLCE_4_0            		#Microsoftr SQL Serverr Compact 4.0 SP1
-# cinstm -source webpi SQLCEforWM           		#Microsoftr SQL Serverr Compact 4.0 SP1 CTP1
-# cinstm -source webpi SQLCEVSTools_4_0     		#Microsoft Visual Studio 2010 SP1 Tools for SQL Server Compact 4.0
-# cinstm -source webpi ExpressionEncoder4   		#Expression Encoder 4 with Service Pack 2
-# cinstm -source webpi ExpressionWeb        		#Expression Web 4 Trial
+cwebpi IIS7                 		#IIS Recommended Configuration
+cwebpi IISExpress_ByPlatform 		#IIS 8.0 Express (Windows Vista and up) Or IIS 7.5 Express (Windows XP)- August 2012
+cwebpi SQLLocalDB           		#Microsoft SQL Express LocalDB Edition 11.0
+cwebpi WIFSDK               		#Windows Identity Foundation SDK
+cwebpi WindowsInstaller45   		#Windows Installer 4.5
+cwebpi ASPDOTNETandWebTools2012_2 	#ASP.NET and Web Tools 2012.2
+cwebpi DACFX                		#Microsoft SQL Server 2012 Data-Tier Application Framework (DACFx) (March 2013)
+cwebpi OfficeToolsForVS2012RTW		#Microsoft Office Developer Tools for Visual Studio 2012
+cwebpi ServiceBusCU1        		#Service Bus 1.0 Cumulative Update 1
+cwebpi SSDTVS2010           		#Microsoft SQL Server Data Tools for Visual Studio 2010
+cwebpi SSDTVS2012           		#Microsoft SQL Server Data Tools for Visual Studio 2012
+cwebpi VS2012LS2NOSQL       		#LightSwitch in Visual Studio 2012 - Server Configuration without local SQL Express
+cwebpi WorkflowClient       		#Workflow Client 1.0
+# cwebpi AppFabric            		#Windows Server AppFabric
+# cwebpi SQLManagementStudio  		#SQL Server 2008 R2 Management Studio Express with SP1
+# cwebpi WDeployPS            		#Web Deploy 3.0 for Hosting Servers
+# cwebpi Silverlight5Tools    		#Silverlight 5 Tools for Visual Studio 2010
+# cwebpi MVC2                 		#ASP.NET MVC 2
+# cwebpi MVC3                 		#ASP.NET MVC 3 (Visual Studio 2010)
+# cwebpi netframework2        		#.NET Framework 2.0 SP 2
+# cwebpi NETFramework35       		#.NET Framework 3.5 SP 1
+# cwebpi NETFramework45       		#Microsoft .NET Framework 4.5
+# cwebpi NETFramework4PU3     		#Microsoft .NET Framework 4 - Runtime Update 3
+# cwebpi Silverlight4Toolkit  		#Silverlight 4 Toolkit April 2010 Release
+# cwebpi SMO_11_0             		#SQL Server 2012 Shared Management Objects (April 2012)
+# cwebpi SQLCE                		#Microsoftr SQL Serverr Compact Latest
+# cwebpi SQLCE_4_0            		#Microsoftr SQL Serverr Compact 4.0 SP1
+# cwebpi SQLCEforWM           		#Microsoftr SQL Serverr Compact 4.0 SP1 CTP1
+# cwebpi SQLCEVSTools_4_0     		#Microsoft Visual Studio 2010 SP1 Tools for SQL Server Compact 4.0
+# cwebpi ExpressionEncoder4   		#Expression Encoder 4 with Service Pack 2
+# cwebpi ExpressionWeb        		#Expression Web 4 Trial
 
 # cinst Microsoft-Hyper-V-All -source windowsFeatures
 # cinst IIS-WebServerRole -source windowsfeatures
