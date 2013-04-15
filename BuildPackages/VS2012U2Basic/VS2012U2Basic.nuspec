@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>VS2012U2Basic</id>
+    <version>1.0.0</version>
+    <authors>Kristinn</authors>
+    <owners>Kristinn</owners>
+    <description>Basic setup for VS 2012 Update 2</description>
+    <tags>Boxstarter</tags>
+  </metadata>
+</package>
