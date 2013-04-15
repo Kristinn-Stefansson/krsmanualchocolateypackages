@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>SqlServer2008R2</id>
+        <version>10.50.1600.1</version>
+        <title>SQL Server 2008 R2</title>
+        <authors>Microsoft</authors>
+        <owners>Kristinn Stefánsson</owners>
+        <licenseUrl>https://www.google.is/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CDcQFjAA&amp;url=http%3A%2F%2Fdownload.microsoft.com%2Fdownload%2F2%2F7%2F0%2F270b6380-8b38-4268-8ad0-f480a139ab19%2Fsql2008r2_licensingquickreference-updated.pdf&amp;ei=eg4aUaWiPKfC0QW2gIHYCw&amp;usg=AFQjCNG7WO9uq_k4RHiYYoyal5p7Gkz2Pg&amp;bvm=bv.42261806,d.d2k</licenseUrl>
+        <projectUrl>http://www.microsoft.com/en-us/sqlserver/get-sql-server/try-it.aspx#tab2</projectUrl>
+        <iconUrl>http://www.microsoft.com/web/media/icons/sql-icon.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>This silently installs the full version of SQL Server along with Integration Services and BI Development Studio. Creates an account "SqlServiceRunner" with password "SqlServ1ceRunner", which you can change later. Same password used for SA.</description>
+        <summary>Find out for yourself what Microsoft SQL Server 2008 R2 has to offer in terms of even greater manageability, development productivity, and powerful business intelligence</summary>
+        <tags>Microsoft Visual Studio 2012 Ultimate IDE ALM</tags>
+    </metadata>
+    <files>
+		<file src="tools\**" target="tools" />
+    </files>
+</package>
