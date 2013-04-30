@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>developer.setup.extension</id>
+        <version>1.0.2.0</version>
+        <title>Developer setup Pre-Requisites</title>
+        <authors>Arion banki hf.</authors>
+        <owners>Kristinn Stefánsson</owners>
+        <licenseUrl>http://msdn.microsoft.com/en-us/library/ee557253.aspx</licenseUrl>
+        <projectUrl>http://msdn.microsoft.com/</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>The pre-requisites for a typical developer runtime.</description>
+        <summary>Developer Environment Pre-Requisites</summary>
+        <tags>developer prerequisites</tags>
+    </metadata>
+    <files>
+        <file src="Tools\**" target="Tools" />
+        <file src="Extensions\**" target="Extensions" />
+    </files>
+</package>

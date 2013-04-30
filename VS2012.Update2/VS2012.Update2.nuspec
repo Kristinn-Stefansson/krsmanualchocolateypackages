@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>VS2012.Update2</id>
+        <version>11.0.2.1</version>
+        <title>Visual Studio 2012 Update 2</title>
+        <authors>Microsoft</authors>
+        <owners>kristinn</owners>
+        <licenseUrl>http://www.microsoft.com/visualstudio/11/en-us</licenseUrl>
+        <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=38188</projectUrl>
+        <iconUrl>https://raw.github.com/Kristinn-Stefansson/krsmanualchocolateypackages/master/Icons/VS2012.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>An unattended install of Visual Studio 2012.</description>
+        <tags>Microsoft Visual Studio 2012 Update</tags>
+        <dependencies>
+            <dependency id="developer.setup.extension" />
+            <dependency id="tfs2012powertools" />
+        </dependencies>
+    </metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>

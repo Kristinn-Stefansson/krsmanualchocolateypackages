@@ -1,0 +1,1 @@
+Write-Host "Uninstalling does not require any actions"
