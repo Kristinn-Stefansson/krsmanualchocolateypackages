@@ -11,8 +11,8 @@
 #
 # Author:
 #   Colovic Vladan, cvladan@gmail.com
-#   Adopted by 
-#
+# Adapted by:
+#   Kristinn Stefansson, kristinn.stefansson@gmail.com
 
 function Resolve-InstalledApps {
 param(
