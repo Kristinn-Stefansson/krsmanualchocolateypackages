@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>VS2010.SSDT10</id>
+        <version>10.3.21208.0</version>
+        <title>SQL Server Data Tools (Visual Studio 2010)</title>
+        <authors>Microsoft</authors>
+        <owners>kristinn</owners>
+        <licenseUrl>http://msdn.microsoft.com/en-us/data/hh322942</licenseUrl>
+        <projectUrl>http://msdn.microsoft.com/en-us/data/hh297027</projectUrl>
+        <iconUrl>https://raw.github.com/Kristinn-Stefansson/krsmanualchocolateypackages/master/Icons/MS-SSDT-thumb.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>An unattended install of SQL Server Data Tools for Visual Studio 2010.</description>
+        <tags>Microsoft SQL Server Data Tools SSDT Visual Studio 2010</tags>
+        <dependencies>
+            <dependency id="developer.setup.extension" />
+        </dependencies>
+    </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
