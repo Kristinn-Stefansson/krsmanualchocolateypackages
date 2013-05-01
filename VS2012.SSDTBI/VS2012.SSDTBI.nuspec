@@ -14,9 +14,9 @@
     <licenseUrl>http://www.microsoft.com/en-us/download/details.aspx?id=36843</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://raw.github.com/Kristinn-Stefansson/krsmanualchocolateypackages/master/Icons/microsoft_logo_56x56.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+	<dependencies>
+		<dependency id="developer.setup.extension" />
+	</dependencies>
     <!--<releaseNotes>.</releaseNotes>-->
   </metadata>
   <files>
