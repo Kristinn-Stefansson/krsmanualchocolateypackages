@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>OpenXml.Tools</id>
+    <title>OpenXml.Tools</title>
+    <version>2.5.5631.0</version>
+    <authors>Microsoft</authors>
+    <owners>Kristinn-Stefansson</owners>
+    <summary>The Open XML SDK 2.5 Productivity Tool for Office..</summary>
+    <description>Installs the Open XML SDK v2.5 Productivity Tool for Office and the hyperlink to documentation for the Open XML SDK 2.5.</description>
+    <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=30425</projectUrl>
+    <tags>Open XML SDK Office Productivity Tool Word Excel PowerPoint</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.microsoft.com/en-us/download/details.aspx?id=30425</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://i.microsoft.com/global/ImageStore/PublishingImages/logos/56x56/office_symbol_clr_56x56.png</iconUrl>
+	<dependencies>
+		<dependency id="OpenXml.SDK" version="(,2.5]" />
+	</dependencies>
+    <!--<releaseNotes>.</releaseNotes>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <!--<file src="content\**" target="content" />-->
+  </files>
+</package>

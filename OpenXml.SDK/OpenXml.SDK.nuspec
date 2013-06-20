@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>OpenXml.SDK</id>
+    <title>OpenXml.SDK</title>
+    <version>2.5.5631.0</version>
+    <authors>Microsoft</authors>
+    <owners>Kristinn-Stefansson</owners>
+    <summary>The Open XML SDK 2.5 for Microsoft Office..</summary>
+    <description>Installs the Open XML SDK 2.5 for Microsoft Office that is built on top of the System.IO.Packaging API and provides strongly typed part classes to manipulate Open XML documents. The SDK also uses the .NET Framework Language-Integrated Query (LINQ) technology to provide strongly typed object access to the XML content inside the parts of Open XML documents.</description>
+    <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=30425</projectUrl>
+    <tags>Open XML SDK Office Word Excel PowerPoint</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.microsoft.com/en-us/download/details.aspx?id=30425</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://i.microsoft.com/global/ImageStore/PublishingImages/logos/56x56/office_symbol_clr_56x56.png</iconUrl>
+	<dependencies>
+	</dependencies>
+    <!--<releaseNotes>.</releaseNotes>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <!--<file src="content\**" target="content" />-->
+  </files>
+</package>
