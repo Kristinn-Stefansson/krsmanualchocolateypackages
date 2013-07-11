@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>VS2012.CRMToolKit</id>
+        <version>5.0.15</version>
+        <title>Microsoft Dynamics CRM 2011 Software Development Kit</title>
+        <authors>Microsoft</authors>
+        <owners>Kristinn-Stefansson</owners>
+        <licenseUrl>http://www.microsoft.com/en-us/download/details.aspx?id=24004</licenseUrl>
+        <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=24004</projectUrl>
+        <iconUrl>https://raw.github.com/Kristinn-Stefansson/krsmanualchocolateypackages/master/Icons/microsoft_logo_56x56.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Updated for Microsoft Dynamics CRM 2011 Update Rollup 13 and the Microsoft Dynamics CRM Online.
+
+The Microsoft Dynamics CRM 2011 Software Development Kit (SDK) is for developers, system customizers, and report writers. This SDK documentation contains information for developers writing server side code, custom business logic, integration modules, workflow assemblies, and plug-ins. It provides an architectural overview of Microsoft Dynamics CRM, the entity model, security model, and Web services. Sample code and walkthroughs are provided to guide you through the new features. It also contains information for developers customizing the Web client or Microsoft Dynamics CRM for Microsoft Office Outlook, including scripting, integration of custom Web pages, and lots of sample code. 
+
+In addition to the documentation, this download package includes the assemblies and tools needed for development, helper code for authentication, and Microsoft Visual Studio projects for all sample code found in the documentation. The package includes a visual style guide you can use to make your customizations fit in smoothly. Look for regular updates to this SDK.</description>
+        <summary>This package contains the complete software development kit for Microsoft Dynamics CRM 2011.</summary>
+        <copyright />
+        <tags>Dynamics CRM 2011 Customer Relationship Management Visual Studio 2012</tags>
+        <dependencies>
+            <dependency id="developer.setup.extension" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+        <file src="tools\ConfigurationFile.ini" target="tools\ConfigurationFile.ini" />
+    </files>
+</package>

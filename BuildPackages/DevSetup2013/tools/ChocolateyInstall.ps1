@@ -62,7 +62,9 @@ cwebpi WorkflowClient       		#Workflow Client 1.0
 # cwebpi NETFramework35       		#.NET Framework 3.5 SP 1
 # cwebpi NETFramework45       		#Microsoft .NET Framework 4.5
 # cwebpi NETFramework4PU3     		#Microsoft .NET Framework 4 - Runtime Update 3
-# cwebpi Silverlight4Toolkit  		#Silverlight 4 Toolkit April 2010 Release
+cwebpi Silverlight4Toolkit  			# Silverlight 4 Toolkit April 2010 Release    
+cwebpi Silverlight4Tools    			# Silverlight 4 Tools for Visual Studio 2010    
+cwebpi Silverlight5Tools    			# Silverlight 5 Tools for Visual Studio 2010   
 # cwebpi SMO_11_0             		#SQL Server 2012 Shared Management Objects (April 2012)
 # cwebpi SQLCE                		#Microsoftr SQL Serverr Compact Latest
 # cwebpi SQLCE_4_0            		#Microsoftr SQL Serverr Compact 4.0 SP1

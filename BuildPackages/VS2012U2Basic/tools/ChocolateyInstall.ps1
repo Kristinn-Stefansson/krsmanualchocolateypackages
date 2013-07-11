@@ -4,6 +4,9 @@ cinstm pswindowsupdate # Alternative version of windows updater PS interface
 Import-Module PsWindowsUpdate
 # Install-WindowsUpdate -AcceptEula
 if(Get-WURebootStatus -Silent){Invoke-Reboot}
+cinstm -source \\fisnets2\systems$\tfs\pub\SharedFunctionality\SharedBinaries\Chocolatey developer.setup.extension
+cinstm -source \\fisnets2\systems$\tfs\pub\SharedFunctionality\SharedBinaries\Chocolatey VS2012.Ultimate
+cinstm -source \\fisnets2\systems$\tfs\pub\SharedFunctionality\SharedBinaries\Chocolatey VS2012.Update1
 cwebpi DACFX
 cinstm tfs2012powertools
 cwebpi SSDTVS2010

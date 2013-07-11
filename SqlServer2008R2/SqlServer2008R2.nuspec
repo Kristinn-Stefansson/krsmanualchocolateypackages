@@ -12,7 +12,7 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>This silently installs the full version of SQL Server along with Integration Services and BI Development Studio. Creates an account "SqlServiceRunner" with password "SqlServ1ceRunner", which you can change later. Same password used for SA.</description>
         <summary>Find out for yourself what Microsoft SQL Server 2008 R2 has to offer in terms of even greater manageability, development productivity, and powerful business intelligence</summary>
-        <tags>Microsoft Visual Studio 2012 Ultimate IDE ALM</tags>
+        <tags>Microsoft SQL Server 2008 R2</tags>
     </metadata>
     <files>
 		<file src="tools\**" target="tools" />

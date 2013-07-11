@@ -7,6 +7,8 @@ cd ..\VS2012.Update1
 cpack
 cd ..\VS2012.Update2
 cpack
+cd ..\VS2012.Update
+cpack
 cd ..\VS2012.SSDTBI
 cpack
 cd ..\VS2012.SSDT11
@@ -16,6 +18,8 @@ cpack
 cd ..\OpenXml.SDK
 cpack
 cd ..\OpenXml.Tools
+cpack
+cd ..\SqlServer2008R2.DTS
 cpack
 cd ..\developer.setup.extension 
 cpack

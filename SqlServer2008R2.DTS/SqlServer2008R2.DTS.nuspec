@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>SqlServer2008R2.DTS</id>
+        <version>10.50.1600.1</version>
+        <title>SQL Server 2008 R2 DTS Compatability</title>
+        <authors>Microsoft</authors>
+        <owners>Kristinn Stefánsson</owners>
+        <licenseUrl>http://www.microsoft.com/en-us/download/details.aspx?id=15748</licenseUrl>
+        <projectUrl>http://msdn.microsoft.com/en-us/library/ms143755(v=sql.105).aspx</projectUrl>
+        <iconUrl>http://www.microsoft.com/web/media/icons/sql-icon.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>SQL Server 2008 does not install design-time support for DTS packages. Before you can use the SQL Server 2008 tools to open and view DTS packages, you have to download and install this design-time support as described in the following procedure.</description>
+        <summary>Use DTS with SQL Server 2008 R2.</summary>
+        <tags>Microsoft SQL Server 2008 R2 DTS</tags>
+    </metadata>
+    <files>
+		<file src="tools\**" target="tools" />
+    </files>
+</package>
