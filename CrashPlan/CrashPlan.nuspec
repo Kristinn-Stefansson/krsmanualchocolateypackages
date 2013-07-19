@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>CrashPlan</id>
+    <title>CrashPlan</title>
+    <version>3.5.3</version>
+    <authors>Code 42 Software</authors>
+    <owners>Kristinn-Stefansson</owners>
+    <summary>CrashPlan is a backup solution that lets you back up back up to other computers, external hard drives or even computers that belong to friends and family for free.</summary>
+    <description>Unlike ordinary online backup, CrashPlan lets you back up to other destinations in addition to online. You can back up to your other computers, external hard drives and to computers that belong to friends and family for free. If you want to back up online too, purchase a CrashPlan+ subscription. CrashPlan auto-updates to the latest version. You do not need to download it again once it's installed. If your download hasn't started or you need to download CrashPlan for another operating system, please use the links to the left.</description>
+    <projectUrl>http://www.crashplan.com/consumer/crashplan.html</projectUrl>
+    <tags>Backup CrashPlan</tags>
+    <copyright>Code 42 Software.</copyright>
+    <licenseUrl>http://www.crashplan.com/consumer/compare.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://www.crashplan.com/consumer/images/crashplan_logo.png</iconUrl>
+	<dependencies>
+	</dependencies>
+    <releaseNotes>Updated to version 3.5.3.</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <!--<file src="content\**" target="content" />-->
+  </files>
+</package>

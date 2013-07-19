@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>BonjourPrintServices</id>
+    <title>BonjourPrintServices</title>
+    <version>2.0.2</version>
+    <authors>Apple Inc.</authors>
+    <owners>Kristinn-Stefansson</owners>
+    <summary>Bonjour Print Services for Windows.</summary>
+    <description>Bonjour Print Services for Windows lets you discover and configure Bonjour-enabled printers from your Windows computer using the Bonjour Printer Wizard.</description>
+    <projectUrl>http://support.apple.com/kb/dl999</projectUrl>
+    <tags>Bonjour Windows Print Printers</tags>
+    <copyright>2013 Apple Inc.</copyright>
+    <licenseUrl>http://support.apple.com/kb/dl999</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://km.support.apple.com/resources/sites/APPLE/content/live/IMAGES/0/IM172/en_US/bonjour-120.png</iconUrl>
+	<dependencies>
+	</dependencies>
+    <!--<releaseNotes>.</releaseNotes>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <!--<file src="content\**" target="content" />-->
+  </files>
+</package>

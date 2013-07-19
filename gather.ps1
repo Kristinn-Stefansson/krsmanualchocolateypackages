@@ -17,6 +17,10 @@ cd ..\VS2010.SSDT10
 cpack
 cd ..\OpenXml.SDK
 cpack
+cd ..\BonjourPrintServices
+cpack
+cd ..\beyondcompare
+cpack
 cd ..\OpenXml.Tools
 cpack
 cd ..\SqlServer2008R2.DTS
