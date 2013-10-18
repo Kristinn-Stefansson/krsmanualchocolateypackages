@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>developer.setup.extension</id>
-        <version>1.0.2.0</version>
+        <version>1.0.6.0</version>
         <title>Developer setup Pre-Requisites</title>
         <authors>Arion banki hf.</authors>
         <owners>Kristinn Stefánsson</owners>

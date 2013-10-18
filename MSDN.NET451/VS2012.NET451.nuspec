@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>MSDN.NET451</id>
+        <version>4.5.50938.18408</version>
+        <title>Dotnet Framework 4.5.1</title>
+        <authors>Microsoft</authors>
+        <owners>kristinn</owners>
+        <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
+        <projectUrl>http://www.microsoft.com/visualstudio/eng#downloads+net-45</projectUrl>
+        <iconUrl>https://raw.github.com/Kristinn-Stefansson/krsmanualchocolateypackages/master/Icons/VS2012.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>This silently installs the full version of .NET 4.5.1 as needed by VS 2012 and VS 2013.</description>
+        <summary>.NET 4.5.1 includes several updates to the .NET framework.</summary>
+        <tags>Microsoft .net Framework 4.5.1 Redistributable</tags>
+        <dependencies>
+            <dependency id="developer.setup.extension" />
+        </dependencies>
+    </metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>

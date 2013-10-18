@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Expression.Studio4</id>
+        <version>4.0.20525.0</version>
+        <title>Microsoft Expression Studio 4</title>
+        <authors>Microsoft</authors>
+        <owners>kristinn</owners>
+        <licenseUrl>http://www.microsoft.com/en-us/download/details.aspx?id=5915</licenseUrl>
+        <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=5915</projectUrl>
+        <iconUrl>http://i.microsoft.com/global/ImageStore/PublishingImages/logos/56x56/microsoft_logo_56x56.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Expression Studio opens up a new world of creative possibility. Its professional design tools give you the freedom to make your vision real—whether you’re designing for standards-based websites, rich desktop experiences, or Silverlight. Includes Expression Web + SuperPreview, Expression Blend, SketchFlow, Expression Encoder Pro and Expression Design.</description>
+        <summary>Expression Studio Ultimate is a family of tools for professional designers building web and Windows client applications and rich media content.</summary>
+        <tags>Microsoft Expression Studio Ultimate</tags>
+        <dependencies>
+            <dependency id="developer.setup.extension" />
+        </dependencies>
+    </metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>

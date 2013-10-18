@@ -1,5 +1,13 @@
 
-cd .\VS2012.Ultimate
+cd .\VS2013.Ultimate
+cpack
+cd ..\VS2012.ToolsForGit
+cpack
+cd ..\VS2012.Ultimate
+cpack
+cd ..\VS2012.Update3
+cpack
+cd ..\MSDN.NET451
 cpack
 cd ..\VS2012.NET45
 cpack
@@ -33,8 +41,22 @@ cd ..\..\
 
 $g = Get-ChildItem -Recurse -Include *.nupkg 
 $g | % {
-    Copy-Item $_.FullName -destination C:\NoBackup\SkyDrive\Code\Chocolatey -Force
+	if((Test-Path C:\Users\Kristinn\SkyDrive\Code\Chocolatey -pathType container))
+	{	
+		Copy-Item $_.FullName -destination C:\Users\Kristinn\SkyDrive\Code\Chocolatey -Force
+	}
+	if((Test-Path C:\NoBackup\SkyDrive\Code\Chocolatey -pathType container))
+	{	
+		Copy-Item $_.FullName -destination C:\NoBackup\SkyDrive\Code\Chocolatey -Force
+	}
+	if((Test-Path C:\NoBackup\NuGetGallery\Internal -pathType container))
+	{	
+		Copy-Item $_.FullName -destination C:\NoBackup\NuGetGallery\Internal -Force
+	}
 }
  $g | % {
-    Move-Item $_.FullName -destination \\fisnets2\systems$\TFS\Pub\SharedFunctionality\SharedBinaries\Chocolatey -Force
+	 if((Test-Path \\fisnets2\systems$\TFS\Pub\SharedFunctionality\SharedBinaries\Chocolatey -pathType container))
+	{
+		Move-Item $_.FullName -destination \\fisnets2\systems$\TFS\Pub\SharedFunctionality\SharedBinaries\Chocolatey -Force
+	}
 }

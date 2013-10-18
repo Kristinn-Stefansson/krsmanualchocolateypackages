@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>VS2012.ToolsForGit</id>
+        <version>0.9.5.0</version>
+        <title>Visual Studio 2012 Tools for Git </title>
+        <authors>Microsoft</authors>
+        <owners>kristinn</owners>
+        <licenseUrl>http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c</licenseUrl>
+        <projectUrl>http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c</projectUrl>
+        <iconUrl>https://raw.github.com/Kristinn-Stefansson/krsmanualchocolateypackages/master/Icons/VS2012.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>An extension for Team Explorer to provide source control integration for Git. Enables integration with local Git repositories and provides tools to work with remote repositories..</description>
+        <tags>Microsoft Visual Studio 2012 Update</tags>
+        <dependencies>
+            <dependency id="developer.setup.extension" />
+            <dependency id="VS2012.Update3" />
+        </dependencies>
+    </metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>
