@@ -1,9 +1,13 @@
 
 cd .\VS2013.Ultimate
 cpack
+cd ..\VS2012.SSDTBI
+cpack
 cd ..\VS2012.ToolsForGit
 cpack
 cd ..\VS2012.Ultimate
+cpack
+cd ..\VS2012.Pro
 cpack
 cd ..\VS2012.Update3
 cpack
@@ -17,8 +21,6 @@ cd ..\VS2012.Update2
 cpack
 cd ..\VS2012.Update
 cpack
-cd ..\VS2012.SSDTBI
-cpack
 cd ..\VS2012.SSDT11
 cpack
 cd ..\VS2010.SSDT10
@@ -31,7 +33,11 @@ cd ..\beyondcompare
 cpack
 cd ..\OpenXml.Tools
 cpack
+cd ..\SqlServer2008R2
+cpack
 cd ..\SqlServer2008R2.DTS
+cpack
+cd ..\SqlServer2008R2SP2
 cpack
 cd ..\developer.setup.extension 
 cpack
@@ -49,9 +55,9 @@ $g | % {
 	{	
 		Copy-Item $_.FullName -destination C:\NoBackup\SkyDrive\Code\Chocolatey -Force
 	}
-	if((Test-Path C:\NoBackup\NuGetGallery\Internal -pathType container))
+	if((Test-Path C:\NoBackup\ChocolateyGallery\Internal -pathType container))
 	{	
-		Copy-Item $_.FullName -destination C:\NoBackup\NuGetGallery\Internal -Force
+		Copy-Item $_.FullName -destination C:\NoBackup\ChocolateyGallery\Internal -Force
 	}
 }
  $g | % {

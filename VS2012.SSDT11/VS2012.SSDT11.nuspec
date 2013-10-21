@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>VS2012.SSDT11</id>
-        <version>11.1.21208.0</version>
+        <version>11.1.31009.1</version>
         <title>SQL Server Data Tools (Visual Studio 2012)</title>
         <authors>Microsoft</authors>
         <owners>kristinn</owners>

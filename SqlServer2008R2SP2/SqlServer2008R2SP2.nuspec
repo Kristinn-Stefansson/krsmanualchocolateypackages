@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>SqlServer2008R2SP2</id>
+        <version>10.50.4000.0</version>
+        <title>SQL Server 2008 R2 SP2</title>
+        <authors>Microsoft</authors>
+        <owners>Kristinn Stefánsson</owners>
+        <licenseUrl>http://www.microsoft.com/en-us/download/details.aspx?id=30437</licenseUrl>
+        <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=30437</projectUrl>
+        <iconUrl>http://www.microsoft.com/web/media/icons/sql-icon.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>This silently installs SQL Server 2008 R2 SP2.</description>
+        <summary>SQL Server 2008 R2 service packs are cumulative and can be used to upgrade all releases of SQL Server 2008 R2 to Service Pack 2.</summary>
+        <tags>Microsoft SQL Server 2008 R2</tags>
+        <dependencies>
+            <dependency id="developer.setup.extension" />
+            <dependency id="SqlServer2008R2" />
+        </dependencies>
+    </metadata>
+    <files>
+		<file src="tools\**" target="tools" />
+    </files>
+</package>

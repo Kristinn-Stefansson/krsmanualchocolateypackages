@@ -1,8 +1,10 @@
 $packageName = 'VS2012.SSDT11'
-$version = "11.1.21208.0"
+$version = "11.1.31009.1"
+
+$currFolder = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $windowsInstallerName = 'Microsoft SQL Server Data Tools 2012'
 $installerType = 'EXE' 
-$url = 'http://go.microsoft.com/fwlink/?LinkID=274984' # download url
+$url = 'http://go.microsoft.com/fwlink/?LinkID=320745&clcid=0x409' # download url
 $url64 = $url # 64bit URL uses the same as $url
 $silentArgs = "/q /norestart /Log $packageName.log"
 $validExitCodes = @(0,3010) 
