@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>VS2012.Ultimate</id>
+        <id>VS2012.Pro</id>
         <version>11.0.50727.1</version>
-        <title>Visual Studio 2012 Ultimate</title>
+        <title>Visual Studio 2012 Professional</title>
         <authors>Microsoft</authors>
         <owners>kristinn</owners>
         <licenseUrl>http://www.microsoft.com/visualstudio/11/en-us</licenseUrl>
         <projectUrl>http://msdn.microsoft.com/en-us/data/hh297027</projectUrl>
         <iconUrl>https://raw.github.com/Kristinn-Stefansson/krsmanualchocolateypackages/master/Icons/VS2012.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>This silently installs the full version of Visual Studio Ultimate along with the Microsoft .Net 4.5 Framework SDK. Most Optional Features such as Blend, Sql Dev tools, Web dev tools, etc. are installed. From the "Programs and Features" menu in Windows you can right click Microsoft Visual Studio Ultimate and choose "Change" and then add the features you want.</description>
-        <summary>Visual Studio Ultimate 2012 is the comprehensive ALM offering for organizations developing and operating highly scalable software applications and services.</summary>
-        <tags>Microsoft Visual Studio 2012 Ultimate</tags>
+		<description>This silently installs the full version of Visual Studio Professional along with the Microsoft .Net 4.5 Framework SDK. Most Optional Features such as Blend, Sql Dev tools, Web dev tools, etc. are installed. From the "Programs and Features" menu in Windows you can right click Microsoft Visual Studio Professional and choose "Change" and then add the features you want.</description>
+        <summary>Visual Studio Professional 2012 is the comprehensive ALM offering for organizations developing and operating highly scalable software applications and services.</summary>
+        <tags>Microsoft Visual Studio 2012 Professional</tags>
         <dependencies>
             <dependency id="developer.setup.extension" />
+            <dependency id="VS2012.NET45" />
         </dependencies>
     </metadata>
 	<files>
