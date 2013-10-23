@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Office2010.Ace32</id>
+        <version>14.0.6119.5000</version>
+        <title>Microsoft Access Database Engine 2010 Redistributable for 32bit Office</title>
+        <authors>Microsoft</authors>
+        <owners>Kristinn.Stefansson</owners>
+        <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=13255</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A set of components that facilitate the transfer of data between existing Microsoft Office files such as Microsoft Office Access 2010 (*.mdb and *.accdb) files and Microsoft Office Excel 2010 (*.xls, *.xlsx, and *.xlsb) files to other data sources such as Microsoft SQL Server. Connectivity to existing text files is also supported. ODBC and OLEDB drivers are installed for application developers to use in developing their applications with connectivity to Office file formats.</description>
+        <tags>Microsoft Access Excel OleDb ODBC Database ACE</tags>
+		<dependencies>
+			<dependency id="developer.setup.extension" />
+		</dependencies>
+    </metadata>
+    <files>
+        <file src="Tools\ChocolateyInstall.ps1" target="Tools\ChocolateyInstall.ps1" />
+    </files>
+</package>

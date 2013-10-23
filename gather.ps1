@@ -43,6 +43,8 @@ cd ..\developer.setup.extension
 cpack
 cd ..\BuildPackages\VS2012U2Basic
 cpack
+cd ..\BuildPackages\VS2012.IdentityAndAccess
+cpack
 cd ..\..\
 
 $g = Get-ChildItem -Recurse -Include *.nupkg 

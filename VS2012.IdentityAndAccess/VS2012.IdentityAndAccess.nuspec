@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>VS2012.IdentityAndAccessTool</id>
+        <version>1.1.0</version>
+        <title>Identity and Access Tool for Visual Studio 2012</title>
+        <authors>Microsoft</authors>
+        <owners>kristinn</owners>
+        <licenseUrl>http://visualstudiogallery.msdn.microsoft.com/e21bf653-dfe1-4d81-b3d3-795cb104066e</licenseUrl>
+        <projectUrl>http://visualstudiogallery.msdn.microsoft.com/site/e21bf653-dfe1-4d81-b3d3-795cb104066e/eula?licenseType=None</projectUrl>
+        <iconUrl>http://i1.visualstudiogallery.msdn.s-msft.com/content/visualstudio/microsoftlogo.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Use this package to secure your application with claims based identity and accept users from multiple identity providers.</description>
+        <tags>Microsoft Visual Studio 2012 Update Windows Identity Foundation claims identity federation wif</tags>
+        <dependencies>
+            <dependency id="VS2012.Ultimate" />
+        </dependencies>
+    </metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>
