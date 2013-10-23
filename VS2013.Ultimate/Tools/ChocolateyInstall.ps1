@@ -23,8 +23,8 @@ $isInstalled = Stop-OnAppIsInstalled $packageName $windowsInstallerName
 if($isInstalled -eq $false) {
 	if(Test-Path $image)
 	{
-		Get-ChocolateyWebFile $packageName $copyInstallerToPath $image
-		$driveLetter = Mount-Iso -isopath $copyInstallerToPath
+		# Get-ChocolateyWebFile $packageName $copyInstallerToPath $image
+		$driveLetter = Mount-Iso -isopath $image
 		$exeToRun = (Join-Path $driveLetter "$imageSetup")
 		try
 		{
