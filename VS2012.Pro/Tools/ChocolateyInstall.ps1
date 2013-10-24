@@ -24,7 +24,7 @@ if($isInstalled -eq $false) {
 	if(Test-Path $image)
 	{
 		Get-ChocolateyWebFile $packageName $copyInstallerToPath $image
-		$driveLetter = Mount-Iso -isopath $copyInstallerToPath
+		$driveLetter = Open-MountedIso -isopath $copyInstallerToPath
 		$exeToRun = (Join-Path $driveLetter "$imageSetup")
 		try
 		{
@@ -33,7 +33,7 @@ if($isInstalled -eq $false) {
 		}
 		finally
 		{
-			Dismount-Iso $driveLetter
+			Close-MountedIso $driveLetter
 		}
 	}
 	else

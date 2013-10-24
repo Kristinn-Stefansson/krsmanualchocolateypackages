@@ -1,51 +1,49 @@
+$gatherRootFolder = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 
-cd .\VS2013.Ultimate
-cpack
-cd ..\VS2012.SSDTBI
-cpack
-cd ..\VS2012.ToolsForGit
-cpack
-cd ..\VS2012.Ultimate
-cpack
-cd ..\VS2012.Pro
-cpack
-cd ..\VS2012.Update3
-cpack
-cd ..\MSDN.NET451
-cpack
-cd ..\VS2012.NET45
-cpack
-cd ..\VS2012.Update1
-cpack
-cd ..\VS2012.Update2
-cpack
-cd ..\VS2012.Update
-cpack
-cd ..\VS2012.SSDT11
-cpack
-cd ..\VS2010.SSDT10
-cpack
-cd ..\OpenXml.SDK
-cpack
-cd ..\BonjourPrintServices
-cpack
-cd ..\beyondcompare
-cpack
-cd ..\OpenXml.Tools
-cpack
-cd ..\SqlServer2008R2
-cpack
-cd ..\SqlServer2008R2.DTS
-cpack
-cd ..\SqlServer2008R2SP2
-cpack
-cd ..\developer.setup.extension 
-cpack
-cd ..\BuildPackages\VS2012U2Basic
-cpack
-cd ..\BuildPackages\VS2012.IdentityAndAccess
-cpack
-cd ..\..\
+Write-Host "Starting check in $gatherRootFolder"
+
+foreach($folder in (Get-ChildItem $gatherRootFolder | where {$_.Attributes -like '*Directory*'} ))
+{
+    Write-Host "Checking in $gatherRootFolder\$folder\"
+    $nuspec = @(Get-ChildItem "$gatherRootFolder\$folder\*.nuspec")
+    if($nuspec -ne $null -and $nuspec.Count -ge 0)
+    {
+        Write-Host "Found $nuspec"
+        $compile = $true
+        $nuget = @(Get-ChildItem "$gatherRootFolder\$folder\*.nupkg" | Where-Object {$_.BaseName -match "$($nuspec[0].BaseName)\..*"} )
+        if($nuget -ne $null)
+        {
+            if($nuget.Count -eq 1)
+            {
+                Write-Host "Found $nuget[0] : $($nuspec[0].LastWriteTime) < $($nuget[0].LastWriteTime)" 
+                if($nuspec[0].LastWriteTime -le $nuget[0].LastWriteTime)
+                {
+                    $compile = $false
+                    Write-Host "No need to compile $name" -ForegroundColor Green
+                }
+                else
+                {
+                    Write-Host "Removing old items: $nuget" -ForegroundColor Magenta
+                    Del $nuget
+                }
+            }
+            elseif($nuget.Count -gt 1)
+            {
+                Write-Host "Removing multiple items: $nuget" -ForegroundColor Magenta
+                Del $nuget
+            }
+        }
+        if($compile)
+        {
+            Write-Host "Start compile $name" -ForegroundColor Yellow
+            
+            cd  "$gatherRootFolder\$folder"
+            cpack "$($nuspec[0].FullName)" 
+            cd ..
+        }
+    }
+}
+
 
 $g = Get-ChildItem -Recurse -Include *.nupkg 
 $g | % {
@@ -65,6 +63,6 @@ $g | % {
  $g | % {
 	 if((Test-Path \\fisnets2\systems$\TFS\Pub\SharedFunctionality\SharedBinaries\Chocolatey -pathType container))
 	{
-		Move-Item $_.FullName -destination \\fisnets2\systems$\TFS\Pub\SharedFunctionality\SharedBinaries\Chocolatey -Force
+		Copy-Item $_.FullName -destination \\fisnets2\systems$\TFS\Pub\SharedFunctionality\SharedBinaries\Chocolatey -Force
 	}
 }

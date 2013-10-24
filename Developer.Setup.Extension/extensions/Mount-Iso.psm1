@@ -15,7 +15,7 @@ public class Shift {
 }                    
 "@
  
-function Mount-Iso ([string]$isoPath)
+function Open-MountedIso ([string]$isoPath)
 {
   <#
 		.SYNOPSIS
@@ -28,7 +28,7 @@ function Mount-Iso ([string]$isoPath)
 			the Path of the image file
 	
 		.EXAMPLE
-			PS C:\> $mountedDrive = Mount-Iso "c:\Stuff.iso"
+			PS C:\> $mountedDrive = Open-MountedIso "c:\Stuff.iso"
 	
 		.INPUTS
 			System.String
@@ -47,13 +47,13 @@ function Mount-Iso ([string]$isoPath)
 	}
 	else
 	{
-		$vcd = VCDMount-Iso -isoPath $isoPath -waitUntilDriveAvailable $false
+		$vcd = Get-VCDMountIso -isoPath $isoPath -waitUntilDriveAvailable $false
         $ret = $vcd.Root
 	}
     return $ret
 }
 
-function Dismount-Iso ([string]$driveLetter)
+function Close-MountedIso ([string]$driveLetter)
 {
     try
     {
@@ -66,7 +66,7 @@ function Dismount-Iso ([string]$driveLetter)
 }
  
  
-function VCDMount-Iso([string]$isoPath, [switch]$waitUntilDriveAvailable) {
+function Get-VCDMountIso([string]$isoPath, [switch]$waitUntilDriveAvailable) {
   <#
 		.SYNOPSIS
 			Uses Virtual Clone Drive to mount the specified ISO file
@@ -78,7 +78,7 @@ function VCDMount-Iso([string]$isoPath, [switch]$waitUntilDriveAvailable) {
 			the Path of the image file
 	
 		.EXAMPLE
-			PS C:\> $mountedDrive = VCDMount-Iso "c:\Stuff.iso"
+			PS C:\> $mountedDrive = Get-VCDMountIso "c:\Stuff.iso"
 	
 		.INPUTS
 			System.String
@@ -104,7 +104,7 @@ function VCDMount-Iso([string]$isoPath, [switch]$waitUntilDriveAvailable) {
 	throw "The registry key 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\App Paths\VCDMount.exe' was not found.  Please install Virtual Clone Drive"
 	}
  
-	$drives = VCDGet-PSDrives
+	$drives = Get-VCDPSDrives
 	$driveToMount = $null
 	if(-not $drives) { throw "Virtual Clone Drive does not have any drive letters assigned.  Please assign at least one drive." }
 	foreach($drive in $drives) {
@@ -119,7 +119,7 @@ function VCDMount-Iso([string]$isoPath, [switch]$waitUntilDriveAvailable) {
 		$driveToMount = $drives[0]
 	}
  
-	$val = Exec-Process -executablePath $vcdPath -arguments "/l=$driveToMount `"$isoPath`"" -waitForCompletion
+	$val = Get-ExecProcess -executablePath $vcdPath -arguments "/l=$driveToMount `"$isoPath`"" -waitForCompletion
 	
 	$psdrive = $null
  
@@ -140,7 +140,7 @@ function VCDMount-Iso([string]$isoPath, [switch]$waitUntilDriveAvailable) {
 }
  
  
-function VCDGet-PSDrives() {
+function Get-VCDPSDrives() {
 <#
 	.SYNOPSIS
 		Gets a list of all drive letters that Virtual Clone Drive uses
@@ -149,7 +149,7 @@ function VCDGet-PSDrives() {
 		Gets a list of all drive letters that Virtual Clone Drive uses
  
 	.EXAMPLE
-		PS C:\> $drives = VCDGet-PSDrives
+		PS C:\> $drives = Get-VCDPSDrives
 		
 	.INPUTS
 		None
@@ -161,7 +161,7 @@ function VCDGet-PSDrives() {
 		Requires that Virtual clone drive is installed
  
 	.LINK
-		VCDMount-Iso
+		Get-VCDMountIso
  
 #>
  
@@ -191,7 +191,7 @@ function VCDGet-PSDrives() {
 }
  
 #Use this to wait a process to complete
-function Exec-Process([string]$executablePath, [string]$arguments, [switch]$waitForCompletion) {
+function Get-ExecProcess([string]$executablePath, [string]$arguments, [switch]$waitForCompletion) {
 	Write-Host ("Start at: " + [DateTime]::Now.ToString())
 	write-host -for cyan "$executablePath ${arguments}"
 	$continue = $true

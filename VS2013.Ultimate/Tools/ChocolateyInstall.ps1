@@ -11,8 +11,6 @@ $validExitCodes = @(0,3010)
 
 # Cached image
 $imageFile = "en_visual_studio_ultimate_2013_x86_dvd_3009107.iso"
-$image = (Join-Path (Join-Path $source "$packageName.$version") "$imageFile")
-$copyInstallerToPath = "$env:TEMP\chocolatey\$packageName\$version\$imageFile"
 $imageSetup = "vs_ultimate.exe"
 
 # Download URL
@@ -21,10 +19,11 @@ $url64 = $url # 64bit URL uses the same as $url
 
 $isInstalled = Stop-OnAppIsInstalled $packageName $windowsInstallerName
 if($isInstalled -eq $false) {
+	$image = (Join-Path (Join-Path $source "$packageName.$version") "$imageFile")
 	if(Test-Path $image)
 	{
-		# Get-ChocolateyWebFile $packageName $copyInstallerToPath $image
-		$driveLetter = Mount-Iso -isopath $image
+		$copyInstallerToPath = "$env:TEMP\chocolatey\$packageName\$version\$imageFile"
+		$driveLetter = Open-MountedIso -isopath $image
 		$exeToRun = (Join-Path $driveLetter "$imageSetup")
 		try
 		{
@@ -33,7 +32,7 @@ if($isInstalled -eq $false) {
 		}
 		finally
 		{
-			Dismount-Iso $driveLetter
+			Close-MountedIso $driveLetter
 		}
 	}
 	else
