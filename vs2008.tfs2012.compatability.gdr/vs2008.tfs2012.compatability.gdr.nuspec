@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>vs2008.tfs2012.compatability.gdr</id>
+        <version>1.0.0.0</version>
+        <title>Visual Studio 2008 SP1 Compatibility GDR for Visual Studio 2012 Team Foundation Server and Team Foundation Service Preview</title>
+        <authors>Arion banki hf.</authors>
+        <owners>Kristinn Stefánsson</owners>
+        <licenseUrl>http://support.microsoft.com/kb/2673642</licenseUrl>
+        <projectUrl>http://support.microsoft.com/kb/2673642</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Visual Studio 2008 SP1 Compatibility GDR for Visual Studio 2012 Team Foundation Server and Team Foundation Service Preview</description>
+        <summary>Developer Environment Pre-Requisites</summary>
+        <tags>Visual Studio 2008 2012 GDR Compatability</tags>
+    </metadata>
+</package>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>VS2012.SharePoint2013Libraries</id>
+        <version>15.0.4535.1000</version>
+        <title>Microsoft SharePoint 2013 Dependencies for Build Server</title>
+        <authors>Microsoft</authors>
+        <owners>kristinn</owners>
+        <licenseUrl>http://msdn.microsoft.com/en-us/library/ff622991.aspx</licenseUrl>
+        <projectUrl>http://msdn.microsoft.com/en-us/library/ff622991.aspx</projectUrl>
+        <iconUrl>https://raw.github.com/Kristinn-Stefansson/krsmanualchocolateypackages/master/Icons/MS-SSDT-thumb.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Installs the files required to build SharePoint projects on a TFS build server. It supports TFS 2012.</description>
+        <tags>Microsoft SharePoint Server 2013 Visual Studio 2012 Team Foundation Build</tags>
+        <dependencies>
+        </dependencies>
+    </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

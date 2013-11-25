@@ -59,6 +59,10 @@ $g | % {
 	{	
 		Copy-Item $_.FullName -destination C:\NoBackup\ChocolateyGallery\Internal -Force
 	}
+	if((Test-Path O:\Projects\Choco\BoxStarterSetup -pathType container))
+	{	
+		Copy-Item $_.FullName -destination O:\Projects\Choco\BoxStarterSetup -Force
+	}
 }
  $g | % {
 	 if((Test-Path \\fisnets2\systems$\TFS\Pub\SharedFunctionality\SharedBinaries\Chocolatey -pathType container))

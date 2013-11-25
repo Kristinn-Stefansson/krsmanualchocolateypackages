@@ -1,29 +1,29 @@
 $currFolder = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 
 # Base setings
-$packageName = 'VS2013.Ultimate'
-$version = "12.0.21005.1"
-$windowsInstallerName = 'Microsoft Visual Studio Ultimate 2013'
+$packageName = 'VS2012.Update4'
+$version = "11.0.61030.0"
+$windowsInstallerName = 'Visual Studio 2012 Update 4 .*'
 $installerType = 'EXE' 
-$adminFile = (Join-Path $currFolder 'AdminDeployment.xml')
-$silentArgs = "/Quiet /NoRestart /AdminFile $adminFile /Log $env:temp\vs2013.$version.log"
+
+$silentArgs = "/Quiet /NoRestart /Log $env:temp\VS2012Update4.$version.log"
 $validExitCodes = @(0,3010) 
 
 # Cached image
-$imageFile = "en_visual_studio_ultimate_2013_x86_dvd_3009107.iso"
+$imageFile = "mu_visual_studio_2012_update_4_x86_dvd_3161759.iso"
 $image = (Join-Path (Join-Path $source "$packageName.$version") "$imageFile")
 $copyInstallerToPath = "$env:TEMP\chocolatey\$packageName\$version\$imageFile"
-$imageSetup = "vs_ultimate.exe"
+$imageSetup = "VS2012.4.exe"
 
 # Download URL
-$url = "http://download.microsoft.com/download/C/F/B/CFBB5FF1-0B27-42E0-8141-E4D6DA0B8B13/vs_ultimate.exe" # download url
+$url = "http://download.microsoft.com/download/D/4/8/D48D1AC2-A297-4C9E-A9D0-A218E6609F06/VSU4/VS2012.4.exe" # download url
 $url64 = $url # 64bit URL uses the same as $url
 
 $isInstalled = Stop-OnAppIsInstalled $packageName $windowsInstallerName
 if($isInstalled -eq $false) {
 	if(Test-Path $image)
 	{
-		# Get-ChocolateyWebFile $packageName $copyInstallerToPath $image
+		
 		$driveLetter = Open-MountedIso -isopath $image
 		$exeToRun = (Join-Path $driveLetter "$imageSetup")
 		try
@@ -42,3 +42,4 @@ if($isInstalled -eq $false) {
 		Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" "$url64"  -validExitCodes $validExitCodes
 	}
 }
+   

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>VS2010.Ultimate</id>
+        <version>10.0.30319.1</version>
+        <title>Visual Studio 2013 Ultimate</title>
+        <authors>Microsoft</authors>
+        <owners>kristinn</owners>
+        <licenseUrl>http://www.microsoft.com/visualstudio/eng#products/2013-editions+product-2013-summary</licenseUrl>
+        <projectUrl>http://www.microsoft.com/visualstudio/eng/products/2013-editions#product-2013-summary</projectUrl>
+        <iconUrl>https://raw.github.com/Kristinn-Stefansson/krsmanualchocolateypackages/master/Icons/VS2013.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>This silently installs the full version of Visual Studio 2013 Ultimate .</description>
+        <summary>Visual Studio Ultimate 2013 is the comprehensive ALM offering for organizations developing and operating highly scalable software applications and services.</summary>
+        <tags>Microsoft Visual Studio 2013 Ultimate</tags>
+        <dependencies>
+            <dependency id="developer.setup.extension" />
+        </dependencies>
+    </metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>

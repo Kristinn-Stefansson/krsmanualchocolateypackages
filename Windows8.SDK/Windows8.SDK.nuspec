@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Windows8.SDK</id>
+        <version>8.100.25984.0</version>
+        <title>Windows Software Development Kit for Windows 8.1</title>
+        <authors>Microsoft</authors>
+        <owners>kristinn</owners>
+        <licenseUrl>http://msdn.microsoft.com/en-US/windows/desktop/bg162891</licenseUrl>
+        <projectUrl>http://msdn.microsoft.com/en-US/windows/desktop/aa904949</projectUrl>
+        <iconUrl>http://i.msdn.microsoft.com/Areas/Epx/Themes/Windows/Content/Windows_logo.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>The Windows Software Development Kit (SDK) for Windows 8.1 contains headers, libraries, and tools you can use when you create apps that run on Windows operating systems. You can use the Windows SDK, along with your chosen development environment, to write Windows Store apps and desktop apps for Windows 8.1 as well as Windows 8, Windows 7, Windows Vista, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008.</description>
+        <summary>Get the headers, libraries, and tools that you need to create Windows Store and desktop apps, in the language of your choice. (Includes the Windows App Certification Kit.)</summary>
+        <tags>Windows 8.1 Software Development Kit SDK</tags>
+    </metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>

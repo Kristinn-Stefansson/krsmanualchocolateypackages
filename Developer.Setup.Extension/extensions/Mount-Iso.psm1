@@ -42,8 +42,17 @@ function Open-MountedIso ([string]$isoPath)
 	#>
 	if (Get-Command "Mount-DiskImage" -errorAction SilentlyContinue)
 	{
-		Mount-DiskImage -ImagePath $isoPath
-        $ret = (Get-DiskImage -ImagePath $isoPath | Get-Volume).DriveLetter + ":\"
+		try
+		{
+			Mount-DiskImage -ImagePath $isoPath
+			$ret = (Get-DiskImage -ImagePath $isoPath | Get-Volume).DriveLetter + ":\"
+		}
+		catch
+		{
+			# Try Virtual CD as a fallback
+			$vcd = Get-VCDMountIso -isoPath $isoPath -waitUntilDriveAvailable $false
+			$ret = $vcd.Root
+		}
 	}
 	else
 	{

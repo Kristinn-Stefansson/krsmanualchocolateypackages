@@ -1,0 +1,1 @@
+Use the script in the folder above to gather dll's from a machine that includes SharePoint libraries.

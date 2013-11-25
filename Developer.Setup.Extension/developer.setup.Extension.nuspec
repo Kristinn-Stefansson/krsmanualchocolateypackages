@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>developer.setup.extension</id>
-        <version>1.0.9.0</version>
+        <version>1.0.11.0</version>
         <title>Developer setup Pre-Requisites</title>
         <authors>Arion banki hf.</authors>
         <owners>Kristinn Stefánsson</owners>
@@ -12,9 +12,9 @@
         <description>The pre-requisites for a typical developer runtime.</description>
         <summary>Developer Environment Pre-Requisites</summary>
         <tags>developer prerequisites</tags>
-        <dependencies>
-            <dependency id="Arion.VirtualCloneDrive" />
-        </dependencies>
+		<dependencies>
+			<dependency id="Arion.VirtualCloneDrive" />
+		</dependencies>
     </metadata>
     <files>
         <file src="Tools\**" target="Tools" />

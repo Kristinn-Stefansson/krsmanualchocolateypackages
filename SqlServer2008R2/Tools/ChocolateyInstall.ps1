@@ -2,7 +2,7 @@ $currFolder = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 
 # Base setings
 $packageName = 'SqlServer2008R2'
-$version = "11.0.3369.1"
+$version = "10.50.1600.1"
 $windowsInstallerName = 'Microsoft SQL Server 2008 R2'
 $installerType = 'EXE' 
 $user = "SqlServiceRunner"

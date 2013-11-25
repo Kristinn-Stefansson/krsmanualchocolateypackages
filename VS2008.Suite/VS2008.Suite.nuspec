@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>VS2008.Suite</id>
+        <version>9.0.21022.8</version>
+        <title>Visual Studio 2008 Suite</title>
+        <authors>Microsoft</authors>
+        <owners>kristinn</owners>
+        <licenseUrl>http://msdn.microsoft.com/en-US/vstudio</licenseUrl>
+        <projectUrl>http://msdn.microsoft.com/en-US/vstudio</projectUrl>
+        <iconUrl>https://raw.github.com/Kristinn-Stefansson/krsmanualchocolateypackages/master/Icons/VS2013.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>This silently installs the full version of Visual Studio 2008.</description>
+        <summary>Visual Studio 2008.</summary>
+        <tags>Microsoft Visual Studio 2008 Suite</tags>
+        <dependencies>
+            <dependency id="developer.setup.extension" />
+        </dependencies>
+    </metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>

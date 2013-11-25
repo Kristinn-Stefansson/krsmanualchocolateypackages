@@ -1,7 +1,6 @@
-$packageName = 'Windows8.SDK'
-$windowsInstallerName = 'Windows Software Development Kit for Windows 8.1'
-$installerType = 'EXE' 
-$url = 'http://download.microsoft.com/download/E/5/D/E5DEED97-B850-4F9A-B660-4AAABE55A931/standalonesdk/sdksetup.exe' # download url
+﻿$packageName = 'VS2013.TfsPowertools'
+$installerType = 'MSI' 
+$url = 'http://visualstudiogallery.msdn.microsoft.com/f017b10c-02b4-4d6d-9845-58a06545627f/file/112253/2/Visual%20Studio%20Team%20Foundation%20Server%202013%20Power%20Tools.msi' # download url
 $url64 = $url # 64bit URL uses the same as $url
 $silentArgs = "/Quiet /NoRestart /Log $env:temp\Windows8.SDK.log"
 $validExitCodes = @(0,3010) 
